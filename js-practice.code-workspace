@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../js-practice"
+		},
+		{
+			"path": "../tic-tac-toe"
+		},
+		{
+			"path": "../sign-up-form"
+		},
+		{
+			"path": "../grid-practice"
+		},
+		{
+			"path": "../css-exercises/grid"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "admin-dashboard"
+	}
+}
