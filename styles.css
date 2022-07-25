@@ -128,7 +128,7 @@ body {
 #head-bottom {
     display: grid;
     grid-template-columns: 1fr max-content;
-    
+
 }
 
 /******HEADER TOP LEFT*********/
@@ -154,7 +154,7 @@ body {
 #head-top #head-search>div>input {
     appearance: none;
     --webkit-appearance: none;
-    background-color: rgb(227 232 239);   
+    background-color: rgb(227 232 239);
     height: 80%;
     width: 90%;
     margin-left: 15px;
@@ -234,6 +234,7 @@ body {
     font-weight: 600;
 }
 
+/*****HEADER BOTTOM RIGHT******/
 #button-container {
     display: grid;
     justify-items: center;
@@ -243,7 +244,7 @@ body {
     column-gap: 1.5vw;
 }
 
-/*****HEADER BOTTOM RIGHT******/
+
 #button-container button {
     font-size: var(--button-font-size);
 
@@ -267,12 +268,12 @@ body {
     grid-template-columns: 7fr 3fr;
     background-color: rgb(227 232 239);
     margin: 0;
-    
+
 }
 
 #mid-container-l {
     display: grid;
-    grid-template-rows: 1fr 9fr;    
+    grid-template-rows: 1fr 9fr;
 }
 
 #inner-container-l {
@@ -287,16 +288,27 @@ body {
     display: grid;
     grid-template: 2.5fr 3.5fr 4fr / 1fr 20fr;
     overflow: hidden;
-    /*background-color: rgb(255 255 255);*/
+    background-color: rgb(255 255 255);
     border: 1px solid red;
     border-radius: 15px;
 }
 
-.project-item :nth-child(1) {
+.project-item>:nth-child(1) {
     border: none;
     grid-area: 1 / 1 / 4 / 2;
     background-color: rgb(240, 180, 42);
-    
 }
 
+.proj-icon-container {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    direction: rtl;
+    border: 1px solid green;
+    column-gap: 1vw;
+}
+
+.proj-icon-container>* {
+    background-color: transparent;
+    width: calc(12px + 1.3vw);
+}
 
