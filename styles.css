@@ -10,6 +10,7 @@ body {
     --sb-sm-icon: calc(12px + 1.3vw);
     --button-width: 6.5vw;
     --button-font-size: clamp(7px, 1vw, 20px);
+    --screenWidth: clamp(800px, 100vw, 2000px);
 
     margin: 0;
     height: 100%;
@@ -25,12 +26,10 @@ body {
 
 #grid-container {
     display: grid;
-    resize: both;
-
-    width: clamp(600px, 100vw, 2000px);
-    max-height: 100vh;
+    width: var(--screenWidth);
+    min-height: calc(var(--screenWidth) * 0.7);
+    overflow: hidden;
     aspect-ratio: 1/0.7;
-    resize: both;
     grid-template: 20% 80% / 21% 79%;
 }
 
@@ -267,30 +266,41 @@ body {
     display: grid;
     grid-template-columns: 7fr 3fr;
     background-color: rgb(227 232 239);
-    margin: 0;
-
 }
 
 #mid-container-l {
     display: grid;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 1fr 12fr;
+    border:1px solid green;    
 }
 
 #inner-container-l {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    gap: 25px;
-    padding: 25px;
+    gap: 2vw;
+    padding: 0 2vw 2vw 2vw;
     border: solid 1px yellow;
 }
 
 .project-item {
     display: grid;
-    grid-template: 2.5fr 3.5fr 4fr / 1fr 20fr;
+    grid-template: 2.5fr 3.5fr 4fr / 1fr 30fr;
     overflow: hidden;
     background-color: rgb(255 255 255);
-    border: 1px solid red;
     border-radius: 15px;
+    column-gap: 1.5vw;
+    height: clamp(120px, 15vw, 15vw);
+}
+
+.project-item>h2 {
+    font-size: clamp(11px, calc(6px + .8vw), 20px);
+    font-weight: 700;
+    align-self:flex-end;
+}
+
+.project-item>p {
+    font-size: clamp(8px,calc(1px + 1vw), 15px);
+    font-weight: lighter;
 }
 
 .project-item>:nth-child(1) {
@@ -303,12 +313,17 @@ body {
     display: grid;
     grid-template-columns: repeat(4, max-content);
     direction: rtl;
-    border: 1px solid green;
-    column-gap: 1vw;
+    column-gap: 2vw;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.proj-icon-container>div {
+    width:1vw;
 }
 
 .proj-icon-container>* {
     background-color: transparent;
-    width: calc(12px + 1.3vw);
+    width: calc(4px + 1.3vw);
 }
 
